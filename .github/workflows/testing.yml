@@ -13,7 +13,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -41,6 +40,6 @@ jobs:
       run: |
         coverage run manage.py test
         coverage report
-    - name: Test with pytest
+    - name: Testing django
       run: |
-        pytest
+        python3 manage.py test
